@@ -1,0 +1,10 @@
+---
+- name: My First Playbook
+  hosts: localhost
+
+  tasks: 
+    - name: Display hostname
+      command: hostname
+  
+  
+  
