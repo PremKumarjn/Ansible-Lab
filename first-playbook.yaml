@@ -20,6 +20,11 @@
 
     - name: Display memory usage
       command: free -h
+      register: memory_usage
+
+    - name: Display memory usage output
+      debug:
+        var: memory_usage.stdout 
 
     - name: Display system uptime
       command: uptime
