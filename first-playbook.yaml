@@ -6,5 +6,44 @@
     - name: Display hostname
       command: hostname
   
+    - name: Display current date and time
+      command: date
+
+    - name: Display current user
+      command: whoami
+
+    - name: Display current working directory
+      command: pwd
+
+    - name: Display disk usage
+      command: df -h
+
+    - name: Display memory usage
+      command: free -h
+
+    - name: Display system uptime
+      command: uptime
+
+    - name: Display logged in users
+      command: w
+
+    - name: Display network interfaces
+      command: ip addr show
+
+    - name: Display routing table
+      command: ip route show
+
+    - name: Display open ports
+      command: ss -tuln
+
+    - name: Display system processes
+      command: ps aux
+
+    - name: Display system logs
+      command: tail -n 10 /var/log/syslog
+    
+    - name: Display environment variables
+      command: printenv
+  
   
   
