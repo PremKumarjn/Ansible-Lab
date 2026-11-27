@@ -56,6 +56,7 @@
     - name: Display system uptime
       command: uptime
 
+    #Display logged in users
     - name: Display logged in users
       command: w
       register: logged_in_users
