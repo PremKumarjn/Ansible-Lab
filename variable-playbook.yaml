@@ -4,6 +4,7 @@
 
   vars: 
     my_name: "Prem Kumar J"
+    role: "DevOps Engineer"
 
   tasks: 
   
@@ -11,4 +12,7 @@
       debug: 
         var: my_name
         msg: "My name is {{ my_name }}"
-        
+
+    - name: Display employee details
+      debug: 
+        msg: "My name is {{ my_name }} and I am a {{ role }}"
