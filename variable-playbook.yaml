@@ -1,0 +1,14 @@
+---
+- name: Variables
+  hosts: all
+
+  vars: 
+    my_name: "Prem Kumar J"
+
+  tasks: 
+  
+    - name: Display my name
+      debug: 
+        var: my_name
+        msg: "My name is {{ my_name }}"
+        
