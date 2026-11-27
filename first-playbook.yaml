@@ -3,21 +3,47 @@
   hosts: localhost
 
   tasks: 
+  #Display hostname 
     - name: Display hostname
       command: hostname
+      register: hostname_output
+
+    - name: Display hostname output
+      debug: 
+        var: hostname_output.stdout
   
+  #Display Current date and time 
     - name: Display current date and time
       command: date
+      register: current_time
 
+    - name: Display current date and time output
+      debug:
+        var: current_time.stdout
+
+  #Display current user
     - name: Display current user
       command: whoami
+      register: current_user
 
+    - name: Display current user output
+      debug: 
+        var: current_user.stdout
+
+  #Display Current working Directory 
     - name: Display current working directory
       command: pwd
+      register: current_directory
 
+    - name: Display current working directory output
+      debug:
+        var: current_directory.stdout
+
+  #Display disk usage
     - name: Display disk usage
       command: df -h
 
+  #Display memory usage
     - name: Display memory usage
       command: free -h
       register: memory_usage
@@ -26,11 +52,17 @@
       debug:
         var: memory_usage.stdout 
 
+    #Display system uptime 
     - name: Display system uptime
       command: uptime
 
     - name: Display logged in users
       command: w
+      register: logged_in_users
+
+    - name: Display logged in users output
+      debug:
+        var: logged_in_users.stdout
 
     - name: Display network interfaces
       command: ip addr show
